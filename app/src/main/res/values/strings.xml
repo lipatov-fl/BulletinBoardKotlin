@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">BulletinBoardKotlin</string>
+    <!-- Menu Drawer Strings -->
+    <string name="ads_cat1">Ads</string>
+    <string name="ads_my_ads">My ads</string>
+    <string name="ads_car">Cars</string>
+    <string name="ads_ps">Computers</string>
+    <string name="ads_smartphone">Smartphones</string>
+    <string name="ads_appliances">Appliances</string>
+    <string name="aс_cat2">Account</string>
+    <string name="aс_sign_up">Register</string>
+    <string name="aс_sign_in">Entrance</string>
+    <string name="aс_sign_out">Exit</string>
+    <!-- Toolbar Strings -->
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <!-- Menu Header Strings -->
+    <string name="email">email@email.com</string>
+</resources>

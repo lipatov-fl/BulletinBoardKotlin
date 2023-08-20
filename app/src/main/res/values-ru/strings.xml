@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Доска обьявлений</string>
+    <!-- Menu Drawer Strings -->
+    <string name="aс_cat2">Аккаунт</string>
+    <string name="aс_sign_up">Регистрация</string>
+    <string name="aс_sign_in">Вход</string>
+    <string name="aс_sign_out">Выход</string>
+    <string name="ads_cat1">Объявления</string>
+    <string name="ads_my_ads">Мои объявления</string>
+    <string name="ads_car">Автомобили</string>
+    <string name="ads_ps">Компьютеры</string>
+    <string name="ads_smartphone">Смартфоны</string>
+    <string name="ads_appliances">Бытовая техника</string>
+    <!-- Toolbar Strings -->
+    <string name="open">Открыть</string>
+    <string name="close">Закрыть</string>
+    <!-- Menu Header Strings -->
+    <string name="email">email@email.com</string>
+</resources>
