@@ -16,4 +16,7 @@
     <string name="close">Close</string>
     <!-- Menu Header Strings -->
     <string name="email">email@email.com</string>
+    <!-- Sign Dialog -->
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
 </resources>
