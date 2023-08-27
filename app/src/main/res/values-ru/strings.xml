@@ -20,4 +20,7 @@
     <!-- Sign Dialog -->
     <string name="email_hint">Почта</string>
     <string name="password_hint">Пароль</string>
+    <string name="sign_in_action">Войти</string>
+    <string name="sign_up_action">Зарегистрироваться</string>
+    <string name="forget_password">Забыли пароль?</string>
 </resources>

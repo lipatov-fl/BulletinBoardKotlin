@@ -19,4 +19,7 @@
     <!-- Sign Dialog -->
     <string name="email_hint">Email</string>
     <string name="password_hint">Password</string>
+    <string name="sign_in_action">To come in</string>
+    <string name="sign_up_action">Register</string>
+    <string name="forget_password">Forgot your password?</string>
 </resources>

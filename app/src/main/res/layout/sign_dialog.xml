@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="16dp"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/tvSignTitle"
         android:layout_width="wrap_content"
-        android:textColor="@color/black"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/aс_sign_up"
+        android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,4 +40,25 @@
         app:layout_constraintEnd_toEndOf="@+id/edSignEmail"
         app:layout_constraintStart_toStartOf="@+id/edSignEmail"
         app:layout_constraintTop_toBottomOf="@+id/edSignEmail" />
+
+    <Button
+        android:id="@+id/btSignUpIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/sign_up_action"
+        app:layout_constraintEnd_toEndOf="@+id/edSignEmail"
+        app:layout_constraintStart_toStartOf="@+id/edSignEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edSignPassword" />
+
+    <Button
+        android:id="@+id/btForgetPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/forget_password"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/edSignEmail"
+        app:layout_constraintStart_toStartOf="@+id/edSignEmail"
+        app:layout_constraintTop_toBottomOf="@+id/btSignUpIn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
