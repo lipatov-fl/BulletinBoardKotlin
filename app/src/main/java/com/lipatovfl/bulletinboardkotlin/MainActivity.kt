@@ -8,6 +8,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener
 import com.lipatovfl.bulletinboardkotlin.databinding.ActivityMainBinding
+import com.lipatovfl.bulletinboardkotlin.dialogHelper.DialogConst
 import com.lipatovfl.bulletinboardkotlin.dialogHelper.DialogHelper
 
 class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
@@ -57,11 +58,11 @@ class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
             }
 
             R.id.id_sign_up -> {
-               dialogHelper.createSignDialog()
+               dialogHelper.createSignDialog(DialogConst.SIGN_UP_STATE)
             }
 
             R.id.id_sign_in -> {
-                Toast.makeText(this,"Presed id_sign_in", Toast.LENGTH_LONG).show()
+                dialogHelper.createSignDialog(DialogConst.SIGN_IN_STATE)
             }
 
             R.id.id_sign_out -> {
