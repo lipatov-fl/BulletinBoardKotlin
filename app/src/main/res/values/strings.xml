@@ -22,4 +22,8 @@
     <string name="sign_in_action">To come in</string>
     <string name="sign_up_action">Register</string>
     <string name="forget_password">Forgot your password?</string>
+    <string name="sign_up_error">Failed to register</string>
+    <string name="send_verification_email_error">Failed to send confirmation email</string>
+    <string name="send_verification_done">A link has been sent to your email to verify your account.</string>
+
 </resources>
