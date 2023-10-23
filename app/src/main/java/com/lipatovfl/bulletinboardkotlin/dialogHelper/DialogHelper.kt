@@ -10,9 +10,10 @@ import com.lipatovfl.bulletinboardkotlin.databinding.SignDialogBinding
 class DialogHelper(private val act: MainActivity) {
     private val accHelper = AccountHelper(act)
     fun createSignDialog(index: Int) {
-        val builder = AlertDialog.Builder(act)
+        val builder = AlertDialog.Builder(act) // Запускаем диалог
         val binDialog = SignDialogBinding.inflate(act.layoutInflater)
-        val view = binDialog.root
+        builder.setView(binDialog.root)
+
         if (index == DialogConst.SIGN_UP_STATE) {
             binDialog.tvSignTitle.text = act.resources.getString(R.string.aс_sign_up)
             binDialog.btSignUpIn.text = act.resources.getString(R.string.sign_up_action)
@@ -20,17 +21,21 @@ class DialogHelper(private val act: MainActivity) {
             binDialog.tvSignTitle.text = act.resources.getString(R.string.aс_sign_in)
             binDialog.btSignUpIn.text = act.resources.getString(R.string.sign_in_action)
         }
+        val dialog = builder.create()
         binDialog.btSignUpIn.setOnClickListener {
+            dialog.dismiss()
             if (index == DialogConst.SIGN_UP_STATE) {
                 accHelper.signUpWithEmail(
                     binDialog.edSignEmail.text.toString(),
                     binDialog.edSignPassword.text.toString()
                 )
             } else {
-
+                accHelper.signInWithEmail(
+                    binDialog.edSignEmail.text.toString(),
+                    binDialog.edSignPassword.text.toString()
+                )
             }
         }
-        builder.setView(view)
-        builder.show()
+        dialog.show()
     }
 }

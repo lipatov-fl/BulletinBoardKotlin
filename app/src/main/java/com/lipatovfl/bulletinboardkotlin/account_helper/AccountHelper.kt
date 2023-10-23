@@ -10,9 +10,10 @@ class AccountHelper(private val act: MainActivity) {
     fun signUpWithEmail(email: String, password: String) {
         if (email.isNotEmpty() && password.isNotEmpty()) {
             act.mainAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener { task ->                    // обьект, который несет в себе информацию, зареган или нет
+                .addOnCompleteListener { task ->                    // Обьект, который несет в себе информацию, зареган или нет
                     if (task.isSuccessful) {
                         sendEmailVerification(task.result?.user!!)
+                        act.uiUpdate(task.result?.user)
                     } else {
                         Toast.makeText(
                             act,
@@ -24,7 +25,24 @@ class AccountHelper(private val act: MainActivity) {
         }
     }
 
-    private fun sendEmailVerification(user: FirebaseUser) {
+    fun signInWithEmail(email: String, password: String) {  // Функция для входа
+        if (email.isNotEmpty() && password.isNotEmpty()) {
+            act.mainAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener { task ->                    // Обьект, который несет в себе информацию, зареган или нет
+                    if (task.isSuccessful) {
+                        act.uiUpdate(task.result?.user)
+                    } else {
+                        Toast.makeText(
+                            act,
+                            act.resources.getString(R.string.sign_in_error),
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
+        }
+    }
+
+    private fun sendEmailVerification(user: FirebaseUser) { // Отправка письма на почту
         user.sendEmailVerification().addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 Toast.makeText(

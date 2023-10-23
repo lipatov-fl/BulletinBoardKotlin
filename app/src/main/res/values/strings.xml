@@ -11,6 +11,8 @@
     <string name="aс_sign_up">Register</string>
     <string name="aс_sign_in">Entrance</string>
     <string name="aс_sign_out">Exit</string>
+    <string name="not_reg">Login or register!</string>
+
     <!-- Toolbar Strings -->
     <string name="open">Open</string>
     <string name="close">Close</string>
@@ -23,6 +25,7 @@
     <string name="sign_up_action">Register</string>
     <string name="forget_password">Forgot your password?</string>
     <string name="sign_up_error">Failed to register</string>
+    <string name="sign_in_error">Failed to login</string>
     <string name="send_verification_error">Failed to send confirmation email</string>
     <string name="send_verification_done">A link has been sent to your email to verify your account.</string>
 
