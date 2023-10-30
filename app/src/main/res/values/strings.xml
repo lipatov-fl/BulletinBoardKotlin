@@ -20,6 +20,8 @@
     <string name="email">email@email.com</string>
     <!-- Sign Dialog -->
     <string name="email_hint">Email</string>
+    <string name="email_reset_password_was_sent">Password reset email sent successfully</string>
+    <string name="dialog_reset_email_message">To recover your password, please enter your email address.</string>
     <string name="password_hint">Password</string>
     <string name="sign_in_action">To come in</string>
     <string name="sign_up_action">Register</string>

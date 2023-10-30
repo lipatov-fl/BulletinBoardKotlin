@@ -20,6 +20,8 @@
     <string name="email">email@email.com</string>
     <!-- Sign Dialog -->
     <string name="email_hint">Почта</string>
+    <string name="email_reset_password_was_sent">Письмо для сброса пароля успешно отправлено</string>
+    <string name="dialog_reset_email_message">Для восстановления пароля укажите Ваш емайл адрес</string>
     <string name="password_hint">Пароль</string>
     <string name="sign_in_action">Войти</string>
     <string name="sign_up_action">Зарегистрироваться</string>
