@@ -1,18 +1,23 @@
 package com.lipatovfl.bulletinboardkotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.common.api.ApiException
 import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.lipatovfl.bulletinboardkotlin.databinding.ActivityMainBinding
 import com.lipatovfl.bulletinboardkotlin.dialogHelper.DialogConst
 import com.lipatovfl.bulletinboardkotlin.dialogHelper.DialogHelper
+import com.lipatovfl.bulletinboardkotlin.dialogHelper.GoogleAccConst
 
 class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
     private lateinit var tvAccount: TextView
@@ -25,6 +30,23 @@ class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
         setContentView(bindingClass.root)
         setSupportActionBar(bindingClass.mainContentLayout.toolbar)
         init()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (requestCode == GoogleAccConst.GOOGLE_SIGN_IN_REQUEST_CODE) {
+//            Log.d("MyLog", "Sign in result")
+            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+            try {
+                val account = task.getResult(ApiException::class.java)
+                if(account != null) {
+                    dialogHelper.accHelper.signInFirebaseWithGoogle(account.idToken!!)
+                }
+            } catch (e: ApiException) {
+                Log.d("MyLog", "ApiError : ${e.message}")
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data)
+
     }
 
     override fun onStart() {
@@ -86,9 +108,9 @@ class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
     }
 
     fun uiUpdate(user: FirebaseUser?) {
-        tvAccount.text = if(user == null) {
+        tvAccount.text = if (user == null) {
             resources.getString(R.string.not_reg)
-        } else{
+        } else {
             user.email
         }
     }

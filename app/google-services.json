@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "155306067147-vbsqfik87ipps6n6hic248h37883hcu5.apps.googleusercontent.com",
+          "client_id": "155306067147-8lgmq5qbsguvaesga9hqh362ech7quq8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lipatovfl.bulletinboardkotlin",
+            "certificate_hash": "45f41776a3d7a49f7938f66241cd11691842294b"
+          }
+        },
+        {
+          "client_id": "155306067147-t1ndakomut442rari00flrciooo2romf.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -27,7 +35,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "155306067147-vbsqfik87ipps6n6hic248h37883hcu5.apps.googleusercontent.com",
+              "client_id": "155306067147-t1ndakomut442rari00flrciooo2romf.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

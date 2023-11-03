@@ -10,7 +10,7 @@ import com.lipatovfl.bulletinboardkotlin.account_helper.AccountHelper
 import com.lipatovfl.bulletinboardkotlin.databinding.SignDialogBinding
 
 class DialogHelper(private val act: MainActivity) {
-    private val accHelper = AccountHelper(act)
+    val accHelper = AccountHelper(act)
     fun createSignDialog(index: Int) {
         val builder = AlertDialog.Builder(act) // Запускаем диалог
         val binDialog = SignDialogBinding.inflate(act.layoutInflater)
@@ -23,6 +23,9 @@ class DialogHelper(private val act: MainActivity) {
         }
         binDialog.btForgetPassword.setOnClickListener {
             setOnClickResetPassword(binDialog, dialog)
+        }
+        binDialog.btGoogleSignIn.setOnClickListener {
+            accHelper.signInWithGoogle()
         }
         dialog.show()
     }
